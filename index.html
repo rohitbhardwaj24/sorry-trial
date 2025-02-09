@@ -21,49 +21,52 @@
             padding: 20px;
         }
         .container {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 600px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 700px;
             width: 90%;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+            animation: fadeIn 2s ease-in-out;
         }
         h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
         }
         p {
-            font-size: 1.8rem;
-            margin: 15px 0;
+            font-size: 2rem;
+            margin: 20px 0;
         }
         button {
             background: pink;
             color: white;
-            font-size: 1.5rem;
-            padding: 15px 25px;
+            font-size: 1.8rem;
+            padding: 15px 30px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             transition: 0.3s;
+            box-shadow: 0px 5px 10px rgba(255, 182, 193, 0.4);
         }
         button:hover {
             background: lightpink;
+            transform: scale(1.05);
         }
         .image-container {
-            margin-top: 20px;
+            margin-top: 25px;
         }
         .image-container img {
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            margin: 10px;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            margin: 15px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
         }
         .soft-toy {
             position: absolute;
-            bottom: 0;
+            bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 150px;
+            width: 180px;
             animation: bounce 2s infinite ease-in-out;
         }
         @keyframes bounce {
@@ -74,6 +77,10 @@
                 transform: translateX(-50%) translateY(-20px);
             }
         }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -81,12 +88,19 @@
         <h1>I'm Sorry</h1>
         <p>I truly regret what happened. Please forgive me.</p>
         <div class="image-container">
-            <img src="https://source.unsplash.com/200x200/?teddy-bear,cute" alt="Cute Soft Toy">
-            <img src="https://source.unsplash.com/200x200/?flowers,romantic" alt="Beautiful Flowers">
+            <img src="images/teddy.jpg" alt="Cute Soft Toy">
+            <img src="images/flowers.jpg" alt="Beautiful Flowers">
+            <img src="images/flower2.jpg" alt="Cute Soft Toy 2">
+
+
+
+            
+
+
         </div>
         <button onclick="showLove()">Forgive Me</button>
     </div>
-    <img src="https://source.unsplash.com/300x300/?teddy-bear,plush" alt="Bouncing Soft Toy" class="soft-toy">
+    <img src="https://source.unsplash.com/350x350/?teddy-bear,plush" alt="Bouncing Soft Toy" class="soft-toy">
     <script>
         function showLove() {
             document.querySelector('h1').innerText = "Thank You";
